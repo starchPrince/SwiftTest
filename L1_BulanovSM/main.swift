@@ -8,6 +8,7 @@
 import Foundation
 
 print("Hello, World!")
+print("все для теста")
 print(1)
 
 
