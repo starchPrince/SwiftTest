@@ -101,3 +101,22 @@ do {
 } catch fatalErrors.youAreNotCent {
     print("ты не центр") }
 
+
+var players = [
+    player.init(playerName: "KD", playerClub: "Brooklyn", playerPosition: .PF, playerHeight: 6.9),
+    player.init(playerName: "Steph", playerClub: "GoldenState", playerPosition: .PG, playerHeight: 6.5),
+    player.init(playerName: "Bam", playerClub: "miami", playerPosition: .C, playerHeight: 7.0),
+    player.init(playerName: "DBook", playerClub: "SunsOnFourXD", playerPosition: .SG, playerHeight: 6.7),
+    player.init(playerName: "Giannis", playerClub: "Bucks", playerPosition: .PF, playerHeight: 7.1)
+    
+]
+
+for player in players {
+    do {
+        try player.playerCheck()
+        try player.playerTest()
+    } catch fatalErrors.YouTooSmall {
+        print("\(player.playerName), ты СЛИШКОМ МАЛЕНЬКИЙ")
+    } catch fatalErrors.youAreNotCent {
+        print("\(player.playerName), ты не центр") }
+}
